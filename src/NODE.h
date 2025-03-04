@@ -178,6 +178,168 @@ namespace ExpressionLibrary {
         }
     };
 
+    template <typename T>
+    struct SubtractNode : public Node<T> {
+    std::shared_ptr<Node<T>> left, right;
+
+    SubtractNode(std::shared_ptr<Node<T>> left, std::shared_ptr<Node<T>> right)
+        : left(left), right(right) {}
+
+        T evaluate(const std::map<std::string, T>& variables) const override {
+            return left->evaluate(variables) - right->evaluate(variables);
+        }
+
+        std::string to_string() const override {
+            return "(" + left->to_string() + " - " + right->to_string() + ")";
+        }
+
+        std::shared_ptr<Node<T>> clone() const override {
+            return std::make_shared<SubtractNode<T>>(left->clone(), right->clone());
+        }
+
+        std::shared_ptr<Node<T>> differentiate(const std::string& variable) const override {
+            return std::make_shared<SubtractNode<T>>(
+                left->differentiate(variable),
+                right->differentiate(variable)
+            );
+        }
+    };
+
+    template <typename T>
+    struct DivideNode : public Node<T> {
+    std::shared_ptr<Node<T>> left, right;
+
+    DivideNode(std::shared_ptr<Node<T>> left, std::shared_ptr<Node<T>> right)
+        : left(left), right(right) {}
+
+        T evaluate(const std::map<std::string, T>& variables) const override {
+            return left->evaluate(variables) / right->evaluate(variables);
+        }
+
+        std::string to_string() const override {
+            return "(" + left->to_string() + " / " + right->to_string() + ")";
+        }
+
+        std::shared_ptr<Node<T>> clone() const override {
+            return std::make_shared<DivideNode<T>>(left->clone(), right->clone());
+        }
+
+        std::shared_ptr<Node<T>> differentiate(const std::string& variable) const override {
+            return std::make_shared<DivideNode<T>>(
+                    std::make_shared<SubtractNode<T>>(
+                    std::make_shared<MultiplyNode<T>>(left->differentiate(variable), right->clone()),
+                    std::make_shared<MultiplyNode<T>>(left->clone(), right->differentiate(variable))
+                ),
+                std::make_shared<PowerNode<T>>(right->clone(), 2)
+            );
+        }
+    };
+
+    template <typename T>
+    struct PowerNode : public Node<T> {
+    std::shared_ptr<Node<T>> base, exponent;
+
+    PowerNode(std::shared_ptr<Node<T>> base, std::shared_ptr<Node<T>> exponent)
+        : base(base), exponent(exponent) {}
+
+        T evaluate(const std::map<std::string, T>& variables) const override {
+            return std::pow(base->evaluate(variables), exponent->evaluate(variables));
+        }
+
+        std::string to_string() const override {
+            return "(" + base->to_string() + " ^ " + exponent->to_string() + ")";
+        }
+
+        std::shared_ptr<Node<T>> clone() const override {
+            return std::make_shared<PowerNode<T>>(base->clone(), exponent->clone());
+        }
+
+        std::shared_ptr<Node<T>> differentiate(const std::string& variable) const override {
+            return std::make_shared<MultiplyNode<T>>(
+                std::make_shared<MultiplyNode<T>>(
+                    exponent->clone(),
+                    std::make_shared<PowerNode<T>>(base->clone(), std::make_shared<SubtractNode<T>>(exponent->clone(), 1))
+                ),
+                base->differentiate(variable)
+            );
+        }
+    };
+
+    template <typename T>
+    struct LnNode : public Node<T> {
+    std::shared_ptr<Node<T>> arg;
+
+    LnNode(std::shared_ptr<Node<T>> arg) : arg(arg) {}
+
+        T evaluate(const std::map<std::string, T>& variables) const override {
+            return std::log(arg->evaluate(variables));
+        }
+
+        std::string to_string() const override {
+            return "ln(" + arg->to_string() + ")";
+        }
+
+        std::shared_ptr<Node<T>> clone() const override {
+            return std::make_shared<LnNode<T>>(arg->clone());
+        }
+
+        std::shared_ptr<Node<T>> differentiate(const std::string& variable) const override {
+            return std::make_shared<DivideNode<T>>(
+                arg->differentiate(variable),
+                arg->clone()
+            );
+        }
+    };
+
+    template <typename T>
+    struct ExpNode : public Node<T> {
+        std::shared_ptr<Node<T>> arg;
+
+        ExpNode(std::shared_ptr<Node<T>> arg) : arg(arg) {}
+
+        T evaluate(const std::map<std::string, T>& variables) const override {
+            return std::exp(arg->evaluate(variables));
+        }
+
+        std::string to_string() const override {
+            return "exp(" + arg->to_string() + ")";
+        }
+
+        std::shared_ptr<Node<T>> clone() const override {
+            return std::make_shared<ExpNode<T>>(arg->clone());
+        }
+
+        std::shared_ptr<Node<T>> differentiate(const std::string& variable) const override {
+            return std::make_shared<MultiplyNode<T>>(
+                std::make_shared<ExpNode<T>>(arg->clone()),
+                arg->differentiate(variable)
+            );
+        }
+    };
+
+    template <typename T>
+    struct NegateNode : public Node<T> {
+        std::shared_ptr<Node<T>> arg;
+
+        NegateNode(std::shared_ptr<Node<T>> arg) : arg(arg) {}
+
+        T evaluate(const std::map<std::string, T>& variables) const override {
+            return -arg->evaluate(variables);
+        }
+
+        std::string to_string() const override {
+            return "-(" + arg->to_string() + ")";
+        }
+
+        std::shared_ptr<Node<T>> clone() const override {
+            return std::make_shared<NegateNode<T>>(arg->clone());
+        }
+
+        std::shared_ptr<Node<T>> differentiate(const std::string& variable) const override {
+            return std::make_shared<NegateNode<T>>(arg->differentiate(variable));
+        }
+    };
+
 } 
 
 #endif // NODE_H
