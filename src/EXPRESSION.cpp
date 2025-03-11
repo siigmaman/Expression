@@ -103,4 +103,4 @@ namespace ExpressionLibrary {
     template class Expression<double>;
     template class Expression<std::complex<double>>;
 
-} 
+}

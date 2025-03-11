@@ -1,0 +1,15 @@
+{
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        "mingw_64"
+      ],
+      "name": "Mingw64",
+        "includePath": [
+            "${workspaceRoot}\\**",
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include"
+        ],
+      "intelliSenseMode": "linux-gcc-x64"
+    }
+  ]
+}
