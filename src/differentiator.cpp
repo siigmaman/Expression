@@ -58,7 +58,6 @@ int main(int argc, char* argv[]) {
             ExpressionLibrary::Parser<double> parser(expression);
             std::shared_ptr<ExpressionLibrary::Node<double>> root = parser.parse();
 
-            // Получаем производную
             auto derivative = root->differentiate(varName);
 
             std::cout << "Derivative: " << derivative->to_string() << "\n";
