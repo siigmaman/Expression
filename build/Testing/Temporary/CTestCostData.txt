@@ -1,0 +1,37 @@
+AddNodeTest.Evaluate 1 0.00504641
+AddNodeTest.ToString 1 0.00608689
+AddNodeTest.Clone 1 0.00451738
+AddNodeTest.Differentiate 1 0.00462993
+AddNodeTest.Substitute 1 0.00489494
+ConstNodeTest.Evaluate 1 0.00893133
+ConstNodeTest.ToString 1 0.00505711
+ConstNodeTest.Clone 1 0.00792615
+ConstNodeTest.Differentiate 1 0.00647994
+ConstNodeTest.Substitute 1 0.00553992
+CosNodeTest.Evaluate 1 0.00545248
+CosNodeTest.Differentiate 1 0.00847303
+DivideNodeTest.Evaluate 1 0.00563295
+DivideNodeTest.Differentiate 0 0
+ExpNodeTest.Evaluate 1 0.00455463
+ExpNodeTest.Differentiate 1 0.00456278
+LnNodeTest.Evaluate 1 0.00540071
+LnNodeTest.Differentiate 1 0.00428061
+MultiplyNodeTest.Evaluate 1 0.00566004
+MultiplyNodeTest.ToString 1 0.00530644
+MultiplyNodeTest.Clone 1 0.00676775
+MultiplyNodeTest.Differentiate 1 0.00349509
+MultiplyNodeTest.Substitute 1 0.0048686
+NegateNodeTest.Evaluate 1 0.00637061
+NegateNodeTest.Differentiate 1 0.00906323
+PowerNodeTest.Evaluate 1 0.0068782
+PowerNodeTest.ToString 1 0.00405639
+PowerNodeTest.Clone 1 0.00422578
+PowerNodeTest.Differentiate 0 0
+PowerNodeTest.Substitute 1 0.0061578
+SinNodeTest.Evaluate 1 0.00542992
+SinNodeTest.Differentiate 1 0.00729534
+SubtractNodeTest.Evaluate 1 0.00445902
+SubtractNodeTest.Differentiate 1 0.00424625
+---
+DivideNodeTest.Differentiate
+PowerNodeTest.Differentiate
