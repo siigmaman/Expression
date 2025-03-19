@@ -25,7 +25,7 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=Release
+CMAKE_BUILD_TYPE:STRING=
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -316,15 +316,6 @@ GIT_EXECUTABLE:FILEPATH=/usr/bin/git
 //Enable installation of googletest. (Projects embedding googletest
 // may want to turn this OFF.)
 INSTALL_GTEST:BOOL=ON
-
-//Value Computed by CMake
-Project_BINARY_DIR:STATIC=/home/vboxuser/Documents/expression/Expression/build
-
-//Value Computed by CMake
-Project_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-Project_SOURCE_DIR:STATIC=/home/vboxuser/Documents/expression/Expression
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/vboxuser/Documents/expression/Expression/build/_deps/googletest-build/googlemock

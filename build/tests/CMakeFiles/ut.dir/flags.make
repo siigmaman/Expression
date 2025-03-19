@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/vboxuser/Documents/expression/Expression/src -isystem /home/vboxuser/Documents/expression/Expression/build/_deps/googletest-src/googletest/include -isystem /home/vboxuser/Documents/expression/Expression/build/_deps/googletest-src/googletest
 
-CXX_FLAGS =  -O2 -O3 -DNDEBUG -std=gnu++20
+CXX_FLAGS =  -O2 -std=gnu++20
 
