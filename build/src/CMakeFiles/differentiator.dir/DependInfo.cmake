@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/vboxuser/Documents/expression/Expression/src/Diff.cpp" "src/CMakeFiles/differentiator.dir/Diff.cpp.o" "gcc" "src/CMakeFiles/differentiator.dir/Diff.cpp.o.d"
+  "/home/vboxuser/Documents/expression/Expression/src/differentiator.cpp" "src/CMakeFiles/differentiator.dir/differentiator.cpp.o" "gcc" "src/CMakeFiles/differentiator.dir/differentiator.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

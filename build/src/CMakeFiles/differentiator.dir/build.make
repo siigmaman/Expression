@@ -69,28 +69,28 @@ include src/CMakeFiles/differentiator.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/differentiator.dir/flags.make
 
-src/CMakeFiles/differentiator.dir/Diff.cpp.o: src/CMakeFiles/differentiator.dir/flags.make
-src/CMakeFiles/differentiator.dir/Diff.cpp.o: /home/vboxuser/Documents/expression/Expression/src/Diff.cpp
-src/CMakeFiles/differentiator.dir/Diff.cpp.o: src/CMakeFiles/differentiator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/Documents/expression/Expression/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/differentiator.dir/Diff.cpp.o"
-	cd /home/vboxuser/Documents/expression/Expression/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/differentiator.dir/Diff.cpp.o -MF CMakeFiles/differentiator.dir/Diff.cpp.o.d -o CMakeFiles/differentiator.dir/Diff.cpp.o -c /home/vboxuser/Documents/expression/Expression/src/Diff.cpp
+src/CMakeFiles/differentiator.dir/differentiator.cpp.o: src/CMakeFiles/differentiator.dir/flags.make
+src/CMakeFiles/differentiator.dir/differentiator.cpp.o: /home/vboxuser/Documents/expression/Expression/src/differentiator.cpp
+src/CMakeFiles/differentiator.dir/differentiator.cpp.o: src/CMakeFiles/differentiator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/Documents/expression/Expression/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/differentiator.dir/differentiator.cpp.o"
+	cd /home/vboxuser/Documents/expression/Expression/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/differentiator.dir/differentiator.cpp.o -MF CMakeFiles/differentiator.dir/differentiator.cpp.o.d -o CMakeFiles/differentiator.dir/differentiator.cpp.o -c /home/vboxuser/Documents/expression/Expression/src/differentiator.cpp
 
-src/CMakeFiles/differentiator.dir/Diff.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/differentiator.dir/Diff.cpp.i"
-	cd /home/vboxuser/Documents/expression/Expression/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/Documents/expression/Expression/src/Diff.cpp > CMakeFiles/differentiator.dir/Diff.cpp.i
+src/CMakeFiles/differentiator.dir/differentiator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/differentiator.dir/differentiator.cpp.i"
+	cd /home/vboxuser/Documents/expression/Expression/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/Documents/expression/Expression/src/differentiator.cpp > CMakeFiles/differentiator.dir/differentiator.cpp.i
 
-src/CMakeFiles/differentiator.dir/Diff.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/differentiator.dir/Diff.cpp.s"
-	cd /home/vboxuser/Documents/expression/Expression/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/Documents/expression/Expression/src/Diff.cpp -o CMakeFiles/differentiator.dir/Diff.cpp.s
+src/CMakeFiles/differentiator.dir/differentiator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/differentiator.dir/differentiator.cpp.s"
+	cd /home/vboxuser/Documents/expression/Expression/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/Documents/expression/Expression/src/differentiator.cpp -o CMakeFiles/differentiator.dir/differentiator.cpp.s
 
 # Object files for target differentiator
 differentiator_OBJECTS = \
-"CMakeFiles/differentiator.dir/Diff.cpp.o"
+"CMakeFiles/differentiator.dir/differentiator.cpp.o"
 
 # External object files for target differentiator
 differentiator_EXTERNAL_OBJECTS =
 
-src/differentiator: src/CMakeFiles/differentiator.dir/Diff.cpp.o
+src/differentiator: src/CMakeFiles/differentiator.dir/differentiator.cpp.o
 src/differentiator: src/CMakeFiles/differentiator.dir/build.make
 src/differentiator: src/libEXPRESSION.a
 src/differentiator: src/CMakeFiles/differentiator.dir/link.txt

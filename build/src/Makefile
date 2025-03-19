@@ -199,30 +199,6 @@ differentiator/fast:
 	cd /home/vboxuser/Documents/expression/Expression/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/differentiator.dir/build.make src/CMakeFiles/differentiator.dir/build
 .PHONY : differentiator/fast
 
-Diff.o: Diff.cpp.o
-.PHONY : Diff.o
-
-# target to build an object file
-Diff.cpp.o:
-	cd /home/vboxuser/Documents/expression/Expression/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/differentiator.dir/build.make src/CMakeFiles/differentiator.dir/Diff.cpp.o
-.PHONY : Diff.cpp.o
-
-Diff.i: Diff.cpp.i
-.PHONY : Diff.i
-
-# target to preprocess a source file
-Diff.cpp.i:
-	cd /home/vboxuser/Documents/expression/Expression/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/differentiator.dir/build.make src/CMakeFiles/differentiator.dir/Diff.cpp.i
-.PHONY : Diff.cpp.i
-
-Diff.s: Diff.cpp.s
-.PHONY : Diff.s
-
-# target to generate assembly for a file
-Diff.cpp.s:
-	cd /home/vboxuser/Documents/expression/Expression/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/differentiator.dir/build.make src/CMakeFiles/differentiator.dir/Diff.cpp.s
-.PHONY : Diff.cpp.s
-
 EXPRESSION.o: EXPRESSION.cpp.o
 .PHONY : EXPRESSION.o
 
@@ -247,6 +223,30 @@ EXPRESSION.cpp.s:
 	cd /home/vboxuser/Documents/expression/Expression/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/EXPRESSION.dir/build.make src/CMakeFiles/EXPRESSION.dir/EXPRESSION.cpp.s
 .PHONY : EXPRESSION.cpp.s
 
+differentiator.o: differentiator.cpp.o
+.PHONY : differentiator.o
+
+# target to build an object file
+differentiator.cpp.o:
+	cd /home/vboxuser/Documents/expression/Expression/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/differentiator.dir/build.make src/CMakeFiles/differentiator.dir/differentiator.cpp.o
+.PHONY : differentiator.cpp.o
+
+differentiator.i: differentiator.cpp.i
+.PHONY : differentiator.i
+
+# target to preprocess a source file
+differentiator.cpp.i:
+	cd /home/vboxuser/Documents/expression/Expression/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/differentiator.dir/build.make src/CMakeFiles/differentiator.dir/differentiator.cpp.i
+.PHONY : differentiator.cpp.i
+
+differentiator.s: differentiator.cpp.s
+.PHONY : differentiator.s
+
+# target to generate assembly for a file
+differentiator.cpp.s:
+	cd /home/vboxuser/Documents/expression/Expression/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/differentiator.dir/build.make src/CMakeFiles/differentiator.dir/differentiator.cpp.s
+.PHONY : differentiator.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -262,12 +262,12 @@ help:
 	@echo "... test"
 	@echo "... EXPRESSION"
 	@echo "... differentiator"
-	@echo "... Diff.o"
-	@echo "... Diff.i"
-	@echo "... Diff.s"
 	@echo "... EXPRESSION.o"
 	@echo "... EXPRESSION.i"
 	@echo "... EXPRESSION.s"
+	@echo "... differentiator.o"
+	@echo "... differentiator.i"
+	@echo "... differentiator.s"
 .PHONY : help
 
 
