@@ -1,10 +1,10 @@
-Start testing: Mar 19 17:16 UTC
+Start testing: Mar 19 17:58 UTC
 ----------------------------------------------------------
 14/34 Testing: DivideNodeTest.Differentiate
 14/34 Test: DivideNodeTest.Differentiate
 Command: "/home/vboxuser/Documents/expression/Expression/build/tests/ut" "--gtest_filter=DivideNodeTest.Differentiate" "--gtest_also_run_disabled_tests"
 Directory: /home/vboxuser/Documents/expression/Expression/build/tests
-"DivideNodeTest.Differentiate" start time: Mar 19 17:16 UTC
+"DivideNodeTest.Differentiate" start time: Mar 19 17:58 UTC
 Output:
 ----------------------------------------------------------
 Running main() from /home/vboxuser/Documents/expression/Expression/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -29,7 +29,7 @@ C++ exception with description "Variable x not found" thrown in the test body.
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Failed.
-"DivideNodeTest.Differentiate" end time: Mar 19 17:16 UTC
+"DivideNodeTest.Differentiate" end time: Mar 19 17:58 UTC
 "DivideNodeTest.Differentiate" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -37,7 +37,7 @@ Test Failed.
 29/34 Test: PowerNodeTest.Differentiate
 Command: "/home/vboxuser/Documents/expression/Expression/build/tests/ut" "--gtest_filter=PowerNodeTest.Differentiate" "--gtest_also_run_disabled_tests"
 Directory: /home/vboxuser/Documents/expression/Expression/build/tests
-"PowerNodeTest.Differentiate" start time: Mar 19 17:16 UTC
+"PowerNodeTest.Differentiate" start time: Mar 19 17:58 UTC
 Output:
 ----------------------------------------------------------
 Running main() from /home/vboxuser/Documents/expression/Expression/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -65,8 +65,8 @@ Expected equality of these values:
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Failed.
-"PowerNodeTest.Differentiate" end time: Mar 19 17:16 UTC
+"PowerNodeTest.Differentiate" end time: Mar 19 17:58 UTC
 "PowerNodeTest.Differentiate" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Mar 19 17:16 UTC
+End testing: Mar 19 17:58 UTC

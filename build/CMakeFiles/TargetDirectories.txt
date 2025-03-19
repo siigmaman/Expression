@@ -6,6 +6,7 @@
 /home/vboxuser/Documents/expression/Expression/build/CMakeFiles/install/local.dir
 /home/vboxuser/Documents/expression/Expression/build/CMakeFiles/install/strip.dir
 /home/vboxuser/Documents/expression/Expression/build/src/CMakeFiles/EXPRESSION.dir
+/home/vboxuser/Documents/expression/Expression/build/src/CMakeFiles/differentiator.dir
 /home/vboxuser/Documents/expression/Expression/build/src/CMakeFiles/test.dir
 /home/vboxuser/Documents/expression/Expression/build/src/CMakeFiles/edit_cache.dir
 /home/vboxuser/Documents/expression/Expression/build/src/CMakeFiles/rebuild_cache.dir

@@ -185,6 +185,19 @@ EXPRESSION/fast:
 .PHONY : EXPRESSION/fast
 
 #=============================================================================
+# Target rules for targets named differentiator
+
+# Build rule for target.
+differentiator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 differentiator
+.PHONY : differentiator
+
+# fast build rule for target.
+differentiator/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/differentiator.dir/build.make src/CMakeFiles/differentiator.dir/build
+.PHONY : differentiator/fast
+
+#=============================================================================
 # Target rules for targets named ut
 
 # Build rule for target.
@@ -263,6 +276,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... EXPRESSION"
+	@echo "... differentiator"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"

@@ -185,6 +185,44 @@ EXPRESSION/fast:
 	cd /home/vboxuser/Documents/expression/Expression/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/EXPRESSION.dir/build.make src/CMakeFiles/EXPRESSION.dir/build
 .PHONY : EXPRESSION/fast
 
+# Convenience name for target.
+src/CMakeFiles/differentiator.dir/rule:
+	cd /home/vboxuser/Documents/expression/Expression/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/differentiator.dir/rule
+.PHONY : src/CMakeFiles/differentiator.dir/rule
+
+# Convenience name for target.
+differentiator: src/CMakeFiles/differentiator.dir/rule
+.PHONY : differentiator
+
+# fast build rule for target.
+differentiator/fast:
+	cd /home/vboxuser/Documents/expression/Expression/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/differentiator.dir/build.make src/CMakeFiles/differentiator.dir/build
+.PHONY : differentiator/fast
+
+Diff.o: Diff.cpp.o
+.PHONY : Diff.o
+
+# target to build an object file
+Diff.cpp.o:
+	cd /home/vboxuser/Documents/expression/Expression/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/differentiator.dir/build.make src/CMakeFiles/differentiator.dir/Diff.cpp.o
+.PHONY : Diff.cpp.o
+
+Diff.i: Diff.cpp.i
+.PHONY : Diff.i
+
+# target to preprocess a source file
+Diff.cpp.i:
+	cd /home/vboxuser/Documents/expression/Expression/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/differentiator.dir/build.make src/CMakeFiles/differentiator.dir/Diff.cpp.i
+.PHONY : Diff.cpp.i
+
+Diff.s: Diff.cpp.s
+.PHONY : Diff.s
+
+# target to generate assembly for a file
+Diff.cpp.s:
+	cd /home/vboxuser/Documents/expression/Expression/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/differentiator.dir/build.make src/CMakeFiles/differentiator.dir/Diff.cpp.s
+.PHONY : Diff.cpp.s
+
 EXPRESSION.o: EXPRESSION.cpp.o
 .PHONY : EXPRESSION.o
 
@@ -223,6 +261,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... EXPRESSION"
+	@echo "... differentiator"
+	@echo "... Diff.o"
+	@echo "... Diff.i"
+	@echo "... Diff.s"
 	@echo "... EXPRESSION.o"
 	@echo "... EXPRESSION.i"
 	@echo "... EXPRESSION.s"

@@ -1,0 +1,1 @@
+/usr/bin/c++  -O2 -O3 -DNDEBUG CMakeFiles/differentiator.dir/Diff.cpp.o -o differentiator  libEXPRESSION.a 
