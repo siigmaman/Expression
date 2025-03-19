@@ -13,3 +13,12 @@ make
 ```sh
 make test
 ```
+
+## Differentiator
+
+```sh
+differentiator --eval “x * y“ x=10 y=12
+```
+```sh
+differentiator --diff “x * sin(x)“ --by x
+```
