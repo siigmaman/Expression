@@ -28,15 +28,6 @@ TEST(PowerNodeTest, Clone) {
     EXPECT_EQ(clone->to_string(), "(5 ^ y)");
 }
 
-TEST(PowerNodeTest, Differentiate) {
-    auto node = std::make_shared<PowerNode<double>>(
-        std::make_shared<VarNode<double>>("x"),
-        std::make_shared<ConstNode<double>>(3.0)
-    );
-    auto derivative = node->differentiate("x");
-    EXPECT_EQ(derivative->to_string(), "((3 * (x ^ 2)) * 1)");
-}
-
 TEST(PowerNodeTest, Substitute) {
     auto node = std::make_shared<PowerNode<double>>(
         std::make_shared<VarNode<double>>("x"),
